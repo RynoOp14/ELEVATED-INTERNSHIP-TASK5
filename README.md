@@ -1,80 +1,89 @@
 Titanic - Exploratory Data Analysis (EDA)
 📌 Project Overview
-This project is part of Task 5 in my Data Analyst Internship. The objective was to perform Exploratory Data Analysis (EDA) on the Titanic dataset to discover patterns, relationships, and trends related to passengers’ survival chances.
+  This project is part of Task 5 in my Data Analyst Internship. The objective was to perform Exploratory Data Analysis (EDA) on the Titanic dataset to discover patterns, relationships, and trends related to passengers’    survival chances.
 
-The Titanic dataset is a classic beginner-friendly dataset from Kaggle, containing details of passengers aboard the RMS Titanic, such as age, gender, class, ticket fare, and survival status.
+  The Titanic dataset is a classic beginner-friendly dataset from Kaggle, containing details of passengers aboard the RMS Titanic, such as age, gender, class, ticket fare, and survival status.
 
 📂 Dataset Files
-This repository contains the following files:
+  
+  This repository contains the following files:
 
-train.csv → Main dataset with survival labels (used for EDA)
+  train.csv → Main dataset with survival labels (used for EDA)
 
-test.csv → Passenger data without survival labels (used for prediction in ML tasks)
+  test.csv → Passenger data without survival labels (used for prediction in ML tasks)
 
-gender_submission.csv → Example submission file from Kaggle
+  gender_submission.csv → Example submission file from Kaggle
 
-task5.ipynb → Jupyter Notebook containing the entire EDA process
+  task5.ipynb → Jupyter Notebook containing the entire EDA process
 
 📊 EDA Process
 
-1. Importing Libraries & Loading Data
-Loaded the dataset using Pandas
+  1. Importing Libraries & Loading Data
+     Loaded the dataset using Pandas
 
-Displayed first few rows with .head() for initial understanding
+     Displayed first few rows with .head() for initial understanding
 
-2. Data Inspection
-.info() to view data types and non-null counts
+  2. Data Inspection
 
-.describe() for statistical summary
+     .info() to view data types and non-null counts
 
-.isnull().sum() to check missing values
+    .describe() for statistical summary
 
-3. Handling Missing Values
-Filled missing Age values with the median
+    .isnull().sum() to check missing values
 
-Filled missing Embarked values with the mode
+  3. Handling Missing Values
 
-Created new column HasCabin (1 if cabin info exists, else 0) to use instead of the mostly empty Cabin column
+    Filled missing Age values with the median
 
-4. Univariate Analysis
-Count plots for Survived and Pclass
+    Filled missing Embarked values with the mode
 
-Histograms for Age and Fare distributions
+    Created new column HasCabin (1 if cabin info exists, else 0) to use instead of the mostly empty Cabin column
 
-5. Bivariate Analysis
-Survival rate by Gender, Passenger Class, Embarked Port, and Cabin availability
+  4. Univariate Analysis
 
-Bar plots to visualize differences
+    Count plots for Survived and Pclass
 
-6. Multivariate Analysis
-Count plot showing combined effect of Pclass and Sex on survival
+    Histograms for Age and Fare distributions
 
-7. Correlation Analysis
-Converted categorical columns (Sex, Embarked) to numeric
+  5. Bivariate Analysis
 
-Created correlation matrix and plotted with a heatmap
+    Survival rate by Gender, Passenger Class, Embarked Port, and Cabin availability
 
-8. Outlier Detection
-Boxplots for Age and Fare to identify extreme values
+    Bar plots to visualize differences
+
+  6. Multivariate Analysis
+
+    Count plot showing combined effect of Pclass and Sex on survival
+
+  7. Correlation Analysis
+  
+    Converted categorical columns (Sex, Embarked) to numeric
+
+    Created correlation matrix and plotted with a heatmap
+
+  8. Outlier Detection
+
+    Boxplots for Age and Fare to identify extreme values
 
 🔍 Key Insights
-Gender: Women had a much higher survival rate (~74%) compared to men (~19%).
 
-Class: Higher-class passengers (1st class) survived more often than lower-class passengers.
+  Gender: Women had a much higher survival rate (~74%) compared to men (~19%).
 
-Fare: Higher ticket fare correlated positively with survival chances.
+  Class: Higher-class passengers (1st class) survived more often than lower-class passengers.
 
-Cabin: Passengers with recorded cabin numbers had better survival rates.
+  Fare: Higher ticket fare correlated positively with survival chances.
 
-Age: Children had a slightly better chance of survival compared to adults.
+  Cabin: Passengers with recorded cabin numbers had better survival rates.
+
+  Age: Children had a slightly better chance of survival compared to adults.
 
 🛠 Tools & Libraries Used
-Python
+  Python
 
-Pandas → Data manipulation
+  Pandas → Data manipulation
 
-NumPy → Numerical operations
+  NumPy → Numerical operations
 
-Matplotlib & Seaborn → Data visualization
+  Matplotlib & Seaborn → Data visualization
 
-Jupyter Notebook
+  Jupyter Notebook
